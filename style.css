@@ -82,11 +82,18 @@ p {
   margin: 4px 0;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
-  background-color: var(--color-brown);
+  background-color: var(--color-mid-blue);
   align-items: center;
   color: var(--color-white);
   padding: 16px;
@@ -99,6 +106,7 @@ p {
 .navbar__logo {
   font-size: var(--font-medium);
   font-weight: var(--weight-semi-bold);
+  color: var(--color-beige);
 }
 
 .navbar__menu__item {
@@ -114,5 +122,34 @@ p {
 
 .navbar__menu__item:hover {
   background-color: var(--color-white);
-  color: var(--color-brown);
+  color: var(--color-mid-blue);
+}
+
+/* Home */
+#home {
+  background: url(img/home-background.png) center/cover no-repeat;
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-regular);
+  font-weight: var(--weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-boarder-radius);
 }
