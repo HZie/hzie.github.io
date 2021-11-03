@@ -34,8 +34,15 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null)
         return;
 
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
     
+});
+
+// Handle click on toggle btn when screen width is small
+const navbarToggleBtn = document.querySelector('.navbar__toggle-btn');
+navbarToggleBtn.addEventListener('click', () => {
+    navbarMenu.classList.toggle('open');
 });
 
 // Handle click on contact button on home

@@ -7,7 +7,7 @@
   --color-white: #fefbf3;
   --color-beige: #f8f0df;
   --color-grey: #9d9d9d;
-  --color-light-orange: #ecb390;
+  --color-light-orange: #ffd580;
   --color-peach: #df7861;
   --color-light-green: #d3e4cd;
   --color-mid-green: #adc2a9;
@@ -403,7 +403,7 @@ button {
 }
 
 .project__name {
-  color: var(--color-white);
+  color: var(--color-light-orange);
 }
 
 .project__name:after {
@@ -411,10 +411,10 @@ button {
   display: block;
   position: relative;
   left: 50%;
-  width: 30px;
+  width: 50px;
   height: 2px;
   background-color: var(--color-white);
-  margin-left: -15px;
+  transform: translateX(-50%);
   margin-top: 8px;
 }
 
@@ -518,6 +518,11 @@ button {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-dark-blue);
+  }
+
+  #navbar.navbar--dark {
+    padding: 16px;
   }
 
   .navbar__menu {
@@ -525,6 +530,10 @@ button {
     text-align: center;
     width: 100%;
     display: none;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .about__majors {
