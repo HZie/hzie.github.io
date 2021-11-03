@@ -19,8 +19,8 @@
   /* Font Size */
   --font-large: 48px;
   --font-medium: 28px;
-  --font-regular: 18px;
-  --font-small: 16px;
+  --font-regular: 20px;
+  --font-small: 18px;
   --font-micro: 14px;
 
   /* Font Weight */
@@ -178,6 +178,10 @@ button {
   border-radius: var(--size-boarder-radius);
 }
 
+.home__contact:hover {
+  background-color: var(--color-light-orange);
+}
+
 /* Section Common */
 .section {
   padding: 50px;
@@ -319,6 +323,7 @@ button {
   border-radius: var(--size-boarder-radius);
   font-size: var(--font-regular);
   padding: 8px 48px;
+  position: relative;
 }
 
 .category__btn.selected,
@@ -344,7 +349,7 @@ button {
   display: inline-block;
   position: relative;
   top: -20px;
-  left: 8px;
+  right: -20px;
   opacity: 0;
   transition: all var(--animation-duration);
 }
@@ -511,8 +516,19 @@ button {
 
 /* For below 768px screen width */
 @media screen and (max-width: 768px) {
+  :root {
+    /* Font Size */
+    --font-large: 25px;
+    --font-medium: 16px;
+    --font-regular: 14px;
+    --font-small: 12px;
+    --font-micro: 10px;
+  }
   .navbar__toggle-btn {
     display: block;
+    top: 16px;
+    right: 16px;
+    font-size: medium;
   }
 
   #navbar {
@@ -523,6 +539,11 @@ button {
 
   #navbar.navbar--dark {
     padding: 16px;
+  }
+
+  .section {
+    padding: 16px;
+    padding-top: 40px;
   }
 
   .navbar__menu {
@@ -538,14 +559,31 @@ button {
 
   .about__majors {
     flex-direction: column;
+    margin-top: 30px;
+    margin-bottom: 0px;
   }
 
   .major {
-    margin-bottom: 38px;
+    margin-bottom: 35px;
   }
 
   .skillset {
     flex-direction: column;
+  }
+
+  .category__btn {
+    margin: auto;
+    width: 100%;
+  }
+
+  .category__count {
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    top: -18px;
+    right: -8px;
+    opacity: 0;
+    transition: all var(--animation-duration);
   }
 
   .project {
@@ -553,9 +591,34 @@ button {
   }
 
   /*
+  .testimonial{
+    flex-direction: column;
+    align-items: center;
+  }
+
   .testimonial__avatar{
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
+  }
+
+  .testimonial__avatar:nth-child(even),
+  .testimonial__avatar:nth-child(odd) {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+
+  .testimonial__speech-bubble{
+    order: 1;
   }
   */
+
+  .arrowup__button {
+    width: 30px;
+    height: 30px;
+    bottom: 16px;
+    right: 16px;
+    line-height: 15px;
+    font-size: 20px;
+    border: 1px solid var(--color-dark-blue);
+  }
 }
