@@ -7,8 +7,6 @@ function scrollIntoView(selector){
     scrollTo.scrollIntoView({behavior: "smooth"});
 }
 
-
-
 // Make navbar transparent when it is on top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -26,7 +24,6 @@ document.addEventListener('scroll', () => {
     }
 
 });
-
 
 // Handle scrolling when tapping on the navbar menu
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -53,3 +50,25 @@ const homeHeight = home.getBoundingClientRect().height;
 document.addEventListener('scroll', () => {
     home.style.opacity = 1- window.scrollY / homeHeight;
 });
+
+// show arrow up button when scrolling down
+const arrowUpBtn = document.querySelector('.arrowup__button');
+document.addEventListener('scroll', () => {
+    if(window.scrollY > homeHeight/2){
+        arrowUpBtn.classList.add('visible');
+    }
+    else{
+        arrowUpBtn.classList.remove('visible');
+    }
+});
+
+// handle click on the 'arrow up' btn
+const handleArrowUp = ()=>{
+    scrollIntoView('#home');
+    arrowUpBtn.removeEventListener('click', handleArrowUp);
+    setTimeout(() => {
+        arrowUpBtn.addEventListener('click', handleArrowUp);
+    }, 1000);
+};
+
+arrowUpBtn.addEventListener('click', handleArrowUp);
