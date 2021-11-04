@@ -1,12 +1,5 @@
 'use strict'
 
-
-// function: scrolling to selector
-function scrollIntoView(selector){
-    const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior: "smooth"});
-}
-
 // Make navbar transparent when it is on top
 const navbar = document.querySelector('#navbar');
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -36,7 +29,6 @@ navbarMenu.addEventListener('click', (event) => {
 
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
-    
 });
 
 // Handle click on toggle btn when screen width is small
@@ -113,3 +105,123 @@ categoryBtnContainer.addEventListener('click', (event) => {
     }, 300);
 
 });
+
+
+// activate menu when scrolled to specific content
+
+// 1. 모든 섹션 요소들과 메뉴 아이디를 가지고 온다.
+// 2. IntersectionObserver를 이용해서 모든 섹션들을 관찰한다.
+// 3. 보여지는 섹션에 해당하는 메뉴 아이템을 활성화시킨다
+
+const sectionIds = [
+    '#home',
+    '#about',
+    '#skills',
+    '#work',
+//  'testimonials',
+    '#contact',
+];
+
+const sections = sectionIds.map(id => document.querySelector(id));
+const navItems = sectionIds.map(id => document.querySelector(`[data-link="${id}"]`));
+
+let selectedNavIdx = getIdxOfSectionOnViewPort();
+let selectedNavItem = navItems[0];
+function selectNavItem(selected){
+    selectedNavItem.classList.remove('selected');
+    selectedNavItem = selected;
+    selectedNavItem.classList.add('selected');
+}
+
+const observerOptions = {
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.7,
+}
+
+const observerCallback = (entries, observer) => {
+    entries.forEach(entry => {
+        if(!entry.isIntersecting && entry.intersectionRatio > 0){
+            const index = sectionIds.indexOf(`#${entry.target.id}`);
+
+            // 스크롤링이 아래로 되어서 페이지가 올라옴
+            if(entry.boundingClientRect.y < 0){
+                selectedNavIdx = index+1;
+            }
+            else{
+                selectedNavIdx = index-1;
+            }
+        }
+    });
+}
+
+const observer = new IntersectionObserver(observerCallback, observerOptions);
+sections.forEach(section => observer.observe(section));
+
+window.addEventListener('wheel', () => {
+        
+    if(window.scrollY === 0){
+        selectedNavIdx = 0;
+    }
+    else if( Math.floor(window.scrollY + window.innerHeight)+1 === document.body.clientHeight){
+        selectedNavIdx = navItems.length-1;
+    }
+    selectNavItem(navItems[selectedNavIdx]);
+});
+
+
+// 새로고침시 navbar의 home이 select되는 문제 해결
+window.addEventListener('load', () => {
+    selectNavItem(navItems[selectedNavIdx]);
+});
+
+// function: scrolling to selector
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior: "smooth"});
+    selectNavItem(navItems[sectionIds.indexOf(selector)]);
+}
+
+// section의 위치를 이용해서 section idx를 찾음
+function getIdxOfSectionOnViewPort(){
+    const section = document.elementFromPoint(window.innerWidth / 2, window.innerHeight*(2/3)).closest('section');
+    const idx = sectionIds.indexOf(`#${section.id}`);
+    return idx;
+}
+
+/*
+// my code
+const sections = document.querySelectorAll('section');
+const options = {
+    root: null,
+    rootMargin: '10px',
+    threshold: 0.8,   // 어떻게 하면 모바일에서 보이게 할까?
+}
+
+const menus = document.querySelectorAll('.navbar__menu__item');
+const callback= (entries, observer) => {
+    entries.forEach(entry => {
+        const eId = "#"+entry.target.id;
+        
+        if(entry.isIntersecting){    //entry id
+            menus.forEach( menu => {
+                if(menu.dataset.link === eId){
+                    menu.classList.add('selected');
+                } 
+            });
+        }
+        else{
+            menus.forEach( menu => {
+                if(menu.dataset.link === eId){
+                    menu.classList.remove('selected');
+                }
+            });
+
+        }
+    });
+}
+
+const observer = new IntersectionObserver(callback, options);
+
+sections.forEach( section => observer.observe(section));
+*/
