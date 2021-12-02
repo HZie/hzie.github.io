@@ -1,282 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>J.Han's Portfolio</title>
-    <meta name="description" content="Portfolio for Software Engineer J.Han">
-    <meta name="author" content="J.Han">
-    <link rel="icon" type="image/png" href="img/favicon.png"/>
-    <script 
-        src="https://kit.fontawesome.com/42764c1962.js" 
-        crossorigin="anonymous"
+    <meta name="description" content="Portfolio for Software Engineer J.Han" />
+    <meta name="author" content="J.Han" />
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <script
+      src="https://kit.fontawesome.com/42764c1962.js"
+      crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
     <script src="main.js" defer></script>
-</head>
+  </head>
 
-<body>
-<!-- BEM: block__element--modifier-->
+  <body>
+    <!-- BEM: block__element--modifier-->
 
     <!-- Navigation Bar -->
     <nav id="navbar">
-        <div class="navbar__logo">
-            <a href="">J.Han</a>
-        </div>
-        <ul class="navbar__menu">
-            <li class="navbar__menu__item" data-link="#home">Home</li>
-            <li class="navbar__menu__item" data-link="#about">About</li>
-            <li class="navbar__menu__item" data-link="#skills">Skills</li>
-            <li class="navbar__menu__item" data-link="#work">Projects</li>
-            <!--<li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>-->
-            <li class="navbar__menu__item" data-link="#contact">Contact</li>
-        </ul>
+      <div class="navbar__logo">
+        <a href="">J.Han</a>
+      </div>
+      <ul class="navbar__menu">
+        <li class="navbar__menu__item" data-link="#home">Home</li>
+        <li class="navbar__menu__item" data-link="#about">About</li>
+        <li class="navbar__menu__item" data-link="#skills">Skills</li>
+        <li class="navbar__menu__item" data-link="#work">Projects</li>
+        <!--<li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>-->
+        <li class="navbar__menu__item" data-link="#contact">Contact</li>
+      </ul>
 
-        <!-- Toggle Button -->
-        <button class="navbar__toggle-btn">
-            <i class="fas fa-bars"></i>
-        </button>
+      <!-- Toggle Button -->
+      <button class="navbar__toggle-btn">
+        <i class="fas fa-bars"></i>
+      </button>
     </nav>
 
     <!-- Home -->
     <section id="home">
-        <img src="img/avatar.png" alt="J's avatar image" 
-        class="home__avatar">
-        <h1 class="home__title">Hello, I'm J. Han</h1>
+      <img src="img/avatar.png" alt="J's avatar image" class="home__avatar" />
+      <h1 class="home__title">Hello, I'm J. Han</h1>
 
-        <!-- 강조하고 싶은 문장 적기-->
-        <h2 class="home__description">A Software Engineer currently living in Seoul, South Korea.</h2>
-        <button class="home__contact" data-link="#contact">CONTACT</button>
+      <!-- 강조하고 싶은 문장 적기-->
+      <h2 class="home__description">
+        A Software Engineer currently living in Seoul, South Korea.
+      </h2>
+      <button class="home__contact" data-link="#contact">CONTACT</button>
     </section>
 
     <!-- About -->
     <section id="about" class="section section__container">
-        <h1 class="about__title">About Me</h1>
-        <p class="about__description">
-            I'm a Software Engineer who loves to interconnect between media contents and technology.<br/>
-            I had released game on steam and android applications on play store when I was a undergraduate student.<br/>
-            Currently learning frontend and backend.
-        </p>
-        <div class="about__majors">
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-html5"></i>
-                </div>
-                <h3 class="major__title">Frontend</h3>
-                <div class="major__description">
-                    HTML, CSS, JavaScript
-                </div>
-            </div>
-
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fab fa-android"></i>
-                </div>
-                <h3 class="major__title">Android Application</h3>
-                <div class="major__description">
-                    Java, Kotlin, Android Studio
-                </div>
-            </div>
-
-            <div class="major">
-                <div class="major__icon">
-                    <i class="fas fa-gamepad"></i>
-                </div>
-                <h3 class="major__title">Game Client</h3>
-                <div class="major__description">
-                    C#, Unity
-                </div>
-            </div>
-
+      <h1 class="about__title">About Me</h1>
+      <p class="about__description">
+        I'm a Software Engineer who loves to interconnect between media contents
+        and technology.<br />
+        I had released game on steam and android applications on play store when
+        I was a undergraduate student.<br />
+        Currently learning frontend and backend.
+      </p>
+      <div class="about__majors">
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-html5"></i>
+          </div>
+          <h3 class="major__title">Frontend</h3>
+          <div class="major__description">HTML, CSS, JavaScript</div>
         </div>
 
-        <div class="about__careers">
-            <div class="career">
-                <img src="img/school_logo.png" alt="" class="career__logo">
-                <div class="job__description">
-                    <p class="career_name">
-                        Ewha Womans University Computer Science and Engineering
-                    </p>
-                    <p class="career__period">
-                        2016 - 2022
-                    </p>
-                </div>
-            </div>
+        <div class="major">
+          <div class="major__icon">
+            <i class="fab fa-android"></i>
+          </div>
+          <h3 class="major__title">Android Application</h3>
+          <div class="major__description">Java, Kotlin, Android Studio</div>
         </div>
+
+        <div class="major">
+          <div class="major__icon">
+            <i class="fas fa-gamepad"></i>
+          </div>
+          <h3 class="major__title">Game Client</h3>
+          <div class="major__description">C#, Unity</div>
+        </div>
+      </div>
+
+      <div class="about__careers">
+        <div class="career">
+          <img src="img/school_logo.png" alt="" class="career__logo" />
+          <div class="job__description">
+            <p class="career_name">
+              Ewha Womans University Computer Science and Engineering
+            </p>
+            <p class="career__period">2016 - 2022</p>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Skills -->
     <section id="skills" class="section">
-        <div class="section__container">
-            <h1 class="skills__title">Skills</h1>
-            <h2 class="skills__subtitle">Skills and Attributes</h2>
-    
-            <div class="skillset">
-                <div class="skillset__left">
-                    <h3 class="skillset__title">Skills</h3>
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Java</span>
-                            <span>80%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 80%;"></div>
-                        </div>
-                    </div>
-                    
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>C</span>
-                            <span>70%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 70%;"></div>
-                        </div>
-                    </div>
-    
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>JavaScript</span>
-                            <span>60%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 60%;"></div>
-                        </div>
-                    </div>
-    
-                    <div class="skill">
-                        <div class="skill__description">
-                            <span>Python</span>
-                            <span>50%</span>
-                        </div>
-                        <div class="skill__bar">
-                            <div class="skill__value" style="width: 40%;"></div>
-                        </div>
-                    </div>
-    
-                </div>
-                <div class="skillset__right">
-                    <div class="tools">
-                        <h3 class="skillset__title">Tools</h3>
-                        <ul class="tools__list">
-                            <li><span>Android Studio</span></li>
-                            <li><span>Visual Studio Code</span></li>
-                            <li><span>Eclipse</span></li>
-                            <li><span>Unity</span></li>
-                            <li><span>Arduino</span></li>
-                        </ul>
-                    </div>
-                    
-                    <div class="etc">
-                        <h3 class="skillset__title">ETC</h3>
-                        <ul class="etc__list">
-                            <li><span>TOEIC 905/990</span></li>
-                            <li><span>Adobe CC</span></li>
-                            <li><span>Office 365</span></li>
-                            <li><span>Figma</span></li>
-                        </ul>
-                    </div>
-                </div>
+      <div class="section__container">
+        <h1 class="skills__title">Skills</h1>
+        <h2 class="skills__subtitle">Skills and Attributes</h2>
+
+        <div class="skillset">
+          <div class="skillset__left">
+            <h3 class="skillset__title">Skills</h3>
+            <div class="skill">
+              <div class="skill__description">
+                <span>Java</span>
+                <span>80%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 80%"></div>
+              </div>
             </div>
+
+            <div class="skill">
+              <div class="skill__description">
+                <span>C</span>
+                <span>70%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 70%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__description">
+                <span>JavaScript</span>
+                <span>60%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 60%"></div>
+              </div>
+            </div>
+
+            <div class="skill">
+              <div class="skill__description">
+                <span>Python</span>
+                <span>50%</span>
+              </div>
+              <div class="skill__bar">
+                <div class="skill__value" style="width: 40%"></div>
+              </div>
+            </div>
+          </div>
+          <div class="skillset__right">
+            <div class="tools">
+              <h3 class="skillset__title">Tools</h3>
+              <ul class="tools__list">
+                <li><span>Android Studio</span></li>
+                <li><span>Visual Studio Code</span></li>
+                <li><span>Eclipse</span></li>
+                <li><span>Unity</span></li>
+                <li><span>Arduino</span></li>
+              </ul>
+            </div>
+
+            <div class="etc">
+              <h3 class="skillset__title">ETC</h3>
+              <ul class="etc__list">
+                <li><span>TOEIC 905/990</span></li>
+                <li><span>Adobe CC</span></li>
+                <li><span>Office 365</span></li>
+                <li><span>Figma</span></li>
+              </ul>
+            </div>
+          </div>
         </div>
-        
+      </div>
     </section>
 
     <!-- Work -->
     <section id="work" class="section">
-        <div class="section__container">
-            <h1 class="work__title">My Work</h1>
-            <h3 class="work__subtitle">Projects</h3>
-            <div class="work__categories">
-                <button class="category__btn selected" data-filter="*">All<span class="category__count">7</span></button>
-                <button class="category__btn" data-filter="fe">Front-end<span class="category__count">1</span></button>
-                <button class="category__btn" data-filter="app">Mobile<span class="category__count">3</span></button>
-                <button class="category__btn" data-filter="game">Game<span class="category__count">2</span></button>
-                <button class="category__btn" data-filter="etc">ETC<span class="category__count">1</span></button>
-            </div>
-
-            <div class="work__projects">
-                <a href="" class="project" target="blank" data-type="fe">
-                    <img class="project__img" src="img/projects/portfolioWebSite.png" alt="Portfolio Website">
-                    <div class="project__description">
-                        <h3 class="project__name">Portfolio Website</h3>
-                        <span>Portfolio Website</span>
-                        <span>Skills: HTML, CSS, JavaScript</span>
-                        <span>Period: 2021.10 - </span>
-                    </div>
-                </a>
-
-                <a href="" class="project" target="blank" data-type="app">
-                    <img class="project__img" src="img/projects/timeWithFox.png" alt="Time With Fox">
-                    <div class="project__description">
-                        <h3 class="project__name">Time With Fox</h3>
-                        <span>To do list application with being friend with fox.</span>
-                        <span>Skill: Java, Android Studio, Realm</span>
-                        <span>Period: 2020.06 - 2020.09</span>
-                    </div>
-                </a>
-
-                <a href="" class="project" target="blank" data-type="etc">
-                    <img class="project__img" src="img/projects/musicAssembler.png" alt="Music Assembler">
-                    <div class="project__description">
-                        <h3 class="project__name">Music Assembler</h3>
-                        <span>Integrated virtual music instrument with block-typed touch sensor.</span>
-                        <span>Skill: C++, C#, Arduino, Unity</span>
-                        <span>Period: 2019.01 - 2020.01</span>
-
-                    </div>
-                </a>
-
-                <a href="" class="project" target="blank" data-type="game">
-                    <img class="project__img" src="img/projects/kingOfCooking.png" alt="King of Cooking">
-                    <div class="project__description">
-                        <h3 class="project__name">King of Cooking</h3>
-                        <span>Cooking tycoon game with managing 4 stores.</span>
-                        <span>SKills: C#, Unity</span>
-                        <span>Period: 2018.06 - 2020.06</span>      
-                    </div>          
-                </a>
-
-                <a href="" class="project" target="blank" data-type="app">
-                    <img class="project__img" src="img/projects/note.png" alt="Note">
-                    <div class="project__description">
-                        <h3 class="project__name">NOTE</h3>
-                        <span>Diary application using musical notes.</span>
-                        <span>Skills: Java, Android Studio, Realm</span>
-                        <span>Period: 2019.10 - 2020.09</span>
-                    </div>
-                </a>
-
-                <a href="" class="project" target="blank" data-type="app">
-                    <img class="project__img" src="img/projects/Sometimes.png" alt="Sometimes">
-                    <div class="project__description">
-                        <h3 class="project__name">Sometimes: Words to Me</h3>
-                        <span>Application for writing quotes and showing them randomly.</span>
-                        <span>Skills: Java, Android Studio</span>
-                        <span>Period: 2019.10 - 2020.01</span>
-                    </div>
-                </a>
-
-                <a href="" class="project" target="blank" data-type="game">
-                    <img class="project__img" src="img/projects/3AM.png" alt="3AM">
-                    <div class="project__description">
-                        <h3 class="project__name">3AM</h3>
-                        <span>2D puzzle game using 3D objects.</span>
-                        <span>Skills: C#, Unity</span>
-                        <span>Period: 2017.06 - 2017.08</span>
-                    </div>
-                </a>
-            </div>
+      <div class="section__container">
+        <h1 class="work__title">My Work</h1>
+        <h3 class="work__subtitle">Projects</h3>
+        <div class="work__categories">
+          <button class="category__btn selected" data-filter="*">
+            All<span class="category__count">7</span>
+          </button>
+          <button class="category__btn" data-filter="fe">
+            Front-end<span class="category__count">1</span>
+          </button>
+          <button class="category__btn" data-filter="app">
+            Mobile<span class="category__count">3</span>
+          </button>
+          <button class="category__btn" data-filter="game">
+            Game<span class="category__count">2</span>
+          </button>
+          <button class="category__btn" data-filter="etc">
+            ETC<span class="category__count">1</span>
+          </button>
         </div>
+
+        <div class="work__projects">
+          <a
+            href=""
+            class="project"
+            target="https://hzie.github.io/shopping-list/"
+            data-type="fe"
+          >
+            <img
+              class="project__img"
+              src="img/projects/shoppinglist.png"
+              alt="Shopping List Website"
+            />
+            <div class="project__description">
+              <h3 class="project__name">Shopping List Website</h3>
+              <span>Shopping List Website</span>
+              <span>Skills: HTML, CSS, JavaScript</span>
+              <span>Period: 2021.12 - 2021.10</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="fe">
+            <img
+              class="project__img"
+              src="img/projects/portfolioWebSite.png"
+              alt="Portfolio Website"
+            />
+            <div class="project__description">
+              <h3 class="project__name">Portfolio Website</h3>
+              <span>Portfolio Website</span>
+              <span>Skills: HTML, CSS, JavaScript</span>
+              <span>Period: 2021.10 - 2021.10</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="app">
+            <img
+              class="project__img"
+              src="img/projects/timeWithFox.png"
+              alt="Time With Fox"
+            />
+            <div class="project__description">
+              <h3 class="project__name">Time With Fox</h3>
+              <span>To do list application with being friend with fox.</span>
+              <span>Skill: Java, Android Studio, Realm</span>
+              <span>Period: 2020.06 - 2020.09</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="etc">
+            <img
+              class="project__img"
+              src="img/projects/musicAssembler.png"
+              alt="Music Assembler"
+            />
+            <div class="project__description">
+              <h3 class="project__name">Music Assembler</h3>
+              <span
+                >Integrated virtual music instrument with block-typed touch
+                sensor.</span
+              >
+              <span>Skill: C++, C#, Arduino, Unity</span>
+              <span>Period: 2019.01 - 2020.01</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="game">
+            <img
+              class="project__img"
+              src="img/projects/kingOfCooking.png"
+              alt="King of Cooking"
+            />
+            <div class="project__description">
+              <h3 class="project__name">King of Cooking</h3>
+              <span>Cooking tycoon game with managing 4 stores.</span>
+              <span>SKills: C#, Unity</span>
+              <span>Period: 2018.06 - 2020.06</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="app">
+            <img class="project__img" src="img/projects/note.png" alt="Note" />
+            <div class="project__description">
+              <h3 class="project__name">NOTE</h3>
+              <span>Diary application using musical notes.</span>
+              <span>Skills: Java, Android Studio, Realm</span>
+              <span>Period: 2019.10 - 2020.09</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="app">
+            <img
+              class="project__img"
+              src="img/projects/Sometimes.png"
+              alt="Sometimes"
+            />
+            <div class="project__description">
+              <h3 class="project__name">Sometimes: Words to Me</h3>
+              <span
+                >Application for writing quotes and showing them randomly.</span
+              >
+              <span>Skills: Java, Android Studio</span>
+              <span>Period: 2019.10 - 2020.01</span>
+            </div>
+          </a>
+
+          <a href="" class="project" target="blank" data-type="game">
+            <img class="project__img" src="img/projects/3AM.png" alt="3AM" />
+            <div class="project__description">
+              <h3 class="project__name">3AM</h3>
+              <span>2D puzzle game using 3D objects.</span>
+              <span>Skills: C#, Unity</span>
+              <span>Period: 2017.06 - 2017.08</span>
+            </div>
+          </a>
+        </div>
+      </div>
     </section>
 
     <!-- Testimonials -->
-<!--   
+    <!--   
     <section id="testimonials">
         <div class="section__container">
             <h1 class="testimonials__title">Testimonials</h1>
@@ -308,19 +355,18 @@
 
     <!-- Contact Info -->
     <section id="contact" class="section">
-        <h1 class="contact__title">Contact</h1>
-        <h2 class="contact__email">boss.hz734@gmail.com</h2>
-        <div class="contact__links">
-            <a href="https://github.com/HZie">
-                <i class="fab fa-github"></i>
-            </a>
-        </div>
+      <h1 class="contact__title">Contact</h1>
+      <h2 class="contact__email">boss.hz734@gmail.com</h2>
+      <div class="contact__links">
+        <a href="https://github.com/HZie">
+          <i class="fab fa-github"></i>
+        </a>
+      </div>
     </section>
 
     <!-- Arrow Up-->
     <button class="arrowup__button">
-        <i class="fas fa-arrow-up"></i>
+      <i class="fas fa-arrow-up"></i>
     </button>
-
-</body>
+  </body>
 </html>
