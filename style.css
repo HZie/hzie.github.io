@@ -260,6 +260,10 @@ button {
   font-size: var(--font-micro);
 }
 
+.career__title{
+  margin: 50px 0 16px 0;
+}
+
 /* Skill */
 
 #skills {
