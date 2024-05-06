@@ -505,11 +505,11 @@ button {
 /* Arrow Up Button */
 .arrowup__button {
   position: fixed;
-  width: 70px;
-  height: 70px;
+  width: 50px;
+  height: 50px;
   bottom: 50px;
   right: 50px;
-  font-size: 50px;
+  font-size: 30px;
   color: var(--color-dark-blue);
   background-color: var(--color-white);
   border: 5px solid var(--color-dark-blue);
