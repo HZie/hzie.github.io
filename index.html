@@ -4,259 +4,270 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>J.Han's Portfolio</title>
-    <meta name="description" content="Portfolio for Software Engineer J.Han" />
-    <meta name="author" content="J.Han" />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-    <script
-      src="https://kit.fontawesome.com/42764c1962.js"
-      crossorigin="anonymous"
-    ></script>
+    <!-- SEO -->
+    <title>Jiyeon&#39s Portfolio</title>
+    <meta name="description" content="Portfolio for Jiyeon Han" />
+    <meta name="author" content="Jiyeon Han" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- OG (Open Graph Data) -->
+    <meta property="og:title" content="Jiyeon's Portfolio" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:url"
+      content="https://hzie.github.io/"
+    />
+    <meta
+      property="og:image"
+      content="https://hzie.github.io/images/og.webp"
+    />
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
-    <script src="main.js" defer></script>
+    <!-- Font Awesome -->
+    <script
+      src="https://kit.fontawesome.com/9eb162ac0d.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Typeit -->
+    <script src="https://unpkg.com/typeit@8.7.1/dist/index.umd.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- Javascript -->
+    <script type="module" src="src/main.js" defer></script>
+    <script type="module" src="src/projects.js" defer></script>
+    <script type="module" src="src/active_menu.js" defer></script>
+    <script type="module" src="src/type.js" defer></script>
   </head>
-
   <body>
-    <!-- BEM: block__element--modifier-->
-
-    <!-- Navigation Bar -->
-    <nav id="navbar">
-      <div class="navbar__logo">
-        <a href="">J.Han</a>
+    <!-- Header -->
+    <header class="header">
+      <div class="header__logo">
+        <img class="header__logo__img" src="images/favicon.ico" alt="logo" />
+        <h1 class="header__logo__title"><a href="#">Jiyeon</a></h1>
       </div>
-      <ul class="navbar__menu">
-        <li class="navbar__menu__item" data-link="#home">Home</li>
-        <li class="navbar__menu__item" data-link="#about">About</li>
-        <li class="navbar__menu__item" data-link="#skills">Skills</li>
-        <li class="navbar__menu__item" data-link="#work">Projects</li>
-        <!--<li class="navbar__menu__item" data-link="#testimonials">Testimonial</li>-->
-        <li class="navbar__menu__item" data-link="#contact">Contact</li>
-      </ul>
-
-      <!-- Toggle Button -->
-      <button class="navbar__toggle-btn">
-        <i class="fas fa-bars"></i>
+      <nav class="header__nav">
+        <ul class="header__menu">
+          <li><a class="header__menu__item active" href="#home">Home</a></li>
+          <li><a class="header__menu__item" href="#about">About</a></li>
+          <!--<li><a class="header__menu__item" href="#skills">Skills</a></li>-->
+          <li><a class="header__menu__item" href="#work">Works</a></li>
+          <li>
+            <!--<a class="header__menu__item" href="#testimonial">Testimonial</a>-->
+          </li>
+          <li><a class="header__menu__item" href="#contact">Contact</a></li>
+          <li><a class="header__menu__item" href="/assets/Jiyeon Han Resume.pdf" target="_blank">CV</a></li>
+        </ul>
+      </nav>
+      <button class="header__toggle" aria-label="navigation menu toggle">
+        <i class="fa-solid fa-bars"></i>
       </button>
-    </nav>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Home -->
+      <section id="home">
+        <div class="max-container home__container">
+          <!--
+          <img
+            class="home__avatar"
+            src="images/profile.png"
+            alt="Jiyeon's profile"/>-->
+          
+          <div>
+            <h2 class="home__title" aria-label="Hello, I'm Dream Coder Ellie">
+              Hello <br />I&#39;m
+              <strong class="home__title--strong">Jiyeon Han</strong>
+            </h2>
+            <p class="home__description">
+              Currently working as a HCI Researcher at HCI Lab, Ewha.
+            </p>
+            <a class="home__contact" href="#contact">Contact</a>
+            <a class="home__contact" href="/assets/Jiyeon Han Resume.pdf" target="_blank">CV</a>
+          </div>
+        </div>
+      </section>
+      <!-- About -->
+      <section id="about" class="section max-container">
+        <h2 class="title">About me</h2>
+        <p class="description">
+          I believe great user experiences start with real conversations, unexpected insights, and continuous iteration. 
+My work focuses on designing human-centered interactions that feel natural and seamless, whether improving digital services, refining AI-driven experiences, or enhancing accessibility.
+        </p>
 
-    <!-- Home -->
-    <section id="home">
-      <img src="img/사진.png" alt="J's profile image" class="home__avatar" />
-      <h1 class="home__title">Hello, I'm J. Han</h1>
-
-      <!-- 강조하고 싶은 문장 적기-->
-      <h2 class="home__description">
-        MS in HCI
-      </h2>
-      <button class="home__contact" data-link="#contact">CONTACT</button>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section section__container">
-      <h1 class="about__title">About Me</h1>
-      <p class="about__description">
-        I believe great user experiences start with real conversations, unexpected insights, and continuous iteration. 
-        <br/>I specialize in user testing, usability research, and hands-on experimentation,
-        <br/> uncovering what makes technology truly intuitive.
-        <br/>My work focuses on designing human-centered interactions that feel natural and seamless, 
-        <br/>whether improving digital services, refining AI-driven experiences, or enhancing accessibility. 
-        <br/>By turning user feedback into actionable insights, I help create products that adapt to people.
         <!--
-        A curious and creative problem solver with a passion 
-        <br/>for understanding user and developing innovative solutions.
-        <br />Excel in collaborative environments, effectively communicating findings.
-        <br />
-        My approach to challenges is uncovering hidden insights through various perspectives.<br />
-        Currently enrolled in Master's Degree Program of Artificial Intelligent
-        and Software <br />
-        in Ewha Womans University.<br />
-        MS Student of Human-Computer Interaction Labs.-->
-      </p>
-      <!--
-      <div class="about__majors">
-        <div class="major">
-          <div class="major__icon">
-            <i class="fas fa-robot"></i>
+        <ul class="majors">
+          <li class="major">
+            <i class="fa-brands fa-html5 major__icon"></i>
+            <p class="major__title">Front-end</p>
+            <p>HTML, CSS, JavaScript, TypeScript, React, Vue, Web APIs</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-mobile major__icon"></i>
+            <p class="major__title">Mobile</p>
+            <p>Android, iOS, React Navtive, Flutter, Java, Swift, Kotlin</p>
+          </li>
+          <li class="major">
+            <i class="fa-solid fa-server major__icon"></i>
+            <p class="major__title">Back-end</p>
+            <p>Java, JavaScript, Go, NodeJs, Rest APIs, GraphQL</p>
+          </li>
+        </ul>-->
+        <ul class="jobs">
+          <li class="job">
+            <img src="images/jobs/school_logo.png" alt="Ewha Womans University logo" />
+            <div>
+              <p class="job__name">Masters of Artificial Intelligence and Software in Ewha Womans University</p>
+              <p class="job__period">2022 - 2024</p>
+            </div>
+          </li>
+          <li class="job">
+            <img src="images/jobs/school_logo.png" alt="Ewha Womans University logo" />
+            <div>
+              <p class="job__name">Bachelors of Computer Science and Engineering in Ewha Womans University</p>
+              <p class="job__period">2016 - 2022</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <!-- Skills -->
+       <!--
+      <section id="skills" class="section">
+        <div class="max-container">
+          <h2 class="title">My Skills</h2>
+          <p class="description">Skills & Attributes</p>
+          <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Alias
+            doloremque sint deleniti vel quod itaque molestias, suscipit dolor
+            cupiditate saepe rem minima, amet ipsum accusantium architecto
+            laboriosam dolore id necessitatibus?
+          </p>
+          <div class="skills">
+            <section class="skills__coding">
+              <h3 class="skills__title">Coding Skills</h3>
+              <ul>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>HTML</span><span>98%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 98%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>CSS</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>JavaScript</span><span>90%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 90%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>TypeScript</span><span>80%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 80%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>React</span><span>79%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 79%"></div>
+                  </div>
+                </li>
+                <li class="bar">
+                  <div class="bar__metadata">
+                    <span>NodeJs</span><span>68%</span>
+                  </div>
+                  <div class="bar__bg">
+                    <div class="bar__value" style="width: 68%"></div>
+                  </div>
+                </li>
+              </ul>
+            </section>
+            <section class="skills__tools">
+              <h3 class="skills__title">Tools</h3>
+              <ul>
+                <li>Visual Studio Code</li>
+                <li>IntelliJ</li>
+                <li>Android Studio Code</li>
+                <li>iOS development tools</li>
+                <li>Sketch app</li>
+              </ul>
+            </section>
+            <section class="skills__etc">
+              <h3 class="skills__title">Etc</h3>
+              <ul>
+                <li>Git</li>
+                <li>Scrum Master</li>
+                <li>Math</li>
+              </ul>
+            </section>
           </div>
-          <h3 class="major__title">Human-Computer Interaction</h3>
-          <div class="major__description">Accessibility, User Experience</div>
         </div>
-
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-html5"></i>
-          </div>
-          <h3 class="major__title">Frontend</h3>
-          <div class="major__description">HTML, CSS, JavaScript</div>
-        </div>
-
-        <div class="major">
-          <div class="major__icon">
-            <i class="fab fa-android"></i>
-          </div>
-          <h3 class="major__title">Android Application</h3>
-          <div class="major__description">Android Studio, React Native</div>
-        </div>
-
-        <div class="major">
-          <div class="major__icon">
-            <i class="fas fa-gamepad"></i>
-          </div>
-          <h3 class="major__title">Game Client</h3>
-          <div class="major__description">Unity</div>
-        </div>
-      </div>
+      </section>
       -->
-
-
-      <div class="about__careers">
-        <h1 class="career__title">Educations</h1>
-        <div class="career">
-          <img src="img/school_logo.png" alt="" class="career__logo" />
-          <div class="job__description">
-            <p class="career_name">
-              Bachelors of Computer Science and Engineering in Ewha Womans
-              University
-            </p>
-            <p class="career__period">2016 - 2022</p>
-          </div>
-        </div>
-
-        <div class="career">
-          <img src="img/school_logo.png" alt="" class="career__logo" />
-          <div class="job__description">
-            <p class="career_name">
-              MS of Artificial Intelligence and Software in Ewha Womans
-              University
-            </p>
-            <p class="career__period">2022 - 2024</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section id="skills" class="section">
-      <div class="section__container">
-        <h1 class="skills__title">Skills</h1>
-        <h2 class="skills__subtitle">Skills and Attributes</h2>
-
-        <div class="skillset">
-          <div class="skillset__left">
-            <h3 class="skillset__title">Skills</h3>
-            <div class="skill">
-              <div class="skill__description">
-                <span>Java</span>
-                <span>80%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>Python</span>
-                <span>80%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 80%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>C</span>
-                <span>70%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 70%"></div>
-              </div>
-            </div>
-
-            <div class="skill">
-              <div class="skill__description">
-                <span>JavaScript</span>
-                <span>50%</span>
-              </div>
-              <div class="skill__bar">
-                <div class="skill__value" style="width: 50%"></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="skillset__right">
-            <div class="tools">
-              <h3 class="skillset__title">Tools</h3>
-              <ul class="tools__list">
-                <li><span>LangChain</span></li>
-                <li><span>Android Studio</span></li>
-                <li><span>Unity</span></li>
-                <li><span>Arduino</span></li>
-                <li><span>Node JS</span></li>
-                <li><span>React Native</span></li>
-                <li><span>Amazon Web Service</span></li>
-                <li><span>PyTorch</span></li>
-              </ul>
-            </div>
-
-            <div class="etc">
-              <h3 class="skillset__title">Language Certificates</h3>
-              <ul class="etc__list">
-                <li><span>OPIc  IH</span></li>
-                <li><span>TOEIC 920/990</span></li>
-                <li><span>JLPT N1</span></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Work -->
-    <section id="work" class="section">
-      <div class="section__container">
-        <h1 class="work__title">My Work</h1>
-        <h3 class="work__subtitle">Projects</h3>
-        <div class="work__categories">
-          <button class="category__btn selected" data-filter="*">
-            All<span class="category__count">13</span>
-          </button>
-          <button class="category__btn" data-filter="fe">
-            Front-end<span class="category__count">2</span>
-          </button>
-          <button class="category__btn" data-filter="app">
-            Mobile<span class="category__count">4</span>
-          </button>
-          <button class="category__btn" data-filter="game">
-            Game<span class="category__count">2</span>
-          </button>
-          <button class="category__btn" data-filter="papers">
-            Publications<span class="category__count">5</span>
-          </button>
-        </div>
-
-        <div class="work__projects">
-          <!-- update here -->
-          <a
+      <!-- Work -->
+      <section id="work" class="section">
+        <div class="max-container">
+          <h2 class="title">Works</h2>
+          <p class="description">Projects</p>
+          <ul class="categories">
+            <li>
+              <button class="category category--selected" data-category="all">
+                All <span class="category__count">13</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="publications">
+                Publications <span class="category__count">5</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="fe">
+                Front-end <span class="category__count">2</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="mobile">
+                Mobile <span class="category__count">4</span>
+              </button>
+            </li>
+            <li>
+              <button class="category" data-category="game">
+                Game <span class="category__count">2</span>
+              </button>
+            </li>
+          </ul>
+          
+          <ul class="projects">
+             <a
           href="https://doi.org/10.1145/3613905.3650785"
           class="project"
           target="blank"
-          data-type="papers"
+          data-type="publications"
         >
           <img
             class="project__img"
-            src="img/projects/AudioAI.png"
+            src="images/projects/AudioAI.png"
             alt="Understanding the Use of AI-Based Audio Generation Models by End-Users"
           />
-          <div class="project__description">
-            <h3 class="project__name">Understanding the Use of AI-Based Audio Generation Models by End-Users</h3>
+          <div class="project__metadata">
+            <h3 class="project__title">Understanding the Use of AI-Based Audio Generation Models by End-Users</h3>
             
             <span
               >Skills: Python, User Study, <br/>Qualitative & Quantitative Analysis</span
@@ -269,15 +280,15 @@
           href="https://doi.org/10.1145/3613905.3650784"
           class="project"
           target="blank"
-          data-type="papers"
+          data-type="publications"
         >
           <img
             class="project__img"
-            src="img/projects/AscleAI.png"
+            src="images/projects/AscleAI.png"
             alt="A LLM-based Clinical Note Management System for Enhancing Clinician Productivity"
           />
-          <div class="project__description">
-            <h3 class="project__name">A LLM-based Clinical Note Management System for Enhancing Clinician Productivity</h3>
+          <div class="project__metadata">
+            <h3 class="project__title">A LLM-based Clinical Note Management System for Enhancing Clinician Productivity</h3>
             
             <span
               >Skills: Python, LLM, Langchain, User Study</span
@@ -290,15 +301,15 @@
             href="https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11287750"
             class="project"
             target="blank"
-            data-type="papers"
+            data-type="publications"
           >
             <img
               class="project__img"
-              src="img/projects/MoodChartBot.png"
+              src="images/projects/MoodChartBot.png"
               alt="Mood Chart Bot application screen"
             />
-            <div class="project__description">
-              <h3 class="project__name">MoodChartBot</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">MoodChartBot</h3>
               <span
                 >An application to help writing mood chart easier using AI
                 detecting emotion depending on user's input.</span
@@ -311,14 +322,14 @@
             </div>
           </a>
 
-          <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003003761" class="project" target="blank" data-type="papers">
+          <a href="https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART003003761" class="project" target="blank" data-type="publications">
             <img
               class="project__img"
-              src="img/projects/TogGrid.png"
+              src="images/projects/TogGrid.png"
               alt="TogGrid is connected to arduino."
             />
-            <div class="project__description">
-              <h3 class="project__name">TogGrid</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">TogGrid</h3>
               <span
                 >A Grid-based tactile toggle buttons for shape understanding and
                 reproduction for blind people</span
@@ -332,15 +343,15 @@
             href="https://github.com/HZie/smart-computing"
             class="project"
             target="blank"
-            data-type="app"
+            data-type="mobile"
           >
             <img
               class="project__img"
-              src="img/projects/reactNative-shoppingList.png"
+              src="images/projects/reactNative-shoppingList.png"
               alt="shopping list application developed with react native"
             />
-            <div class="project__description">
-              <h3 class="project__name">Shopping List Application</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Shopping List Application</h3>
               <span
                 >Shopping list web application developed with react
                 native.</span
@@ -358,11 +369,11 @@
           >
             <img
               class="project__img"
-              src="img/projects/shoppinglist.png"
+              src="images/projects/shoppinglist.png"
               alt="Shopping List Website"
             />
-            <div class="project__description">
-              <h3 class="project__name">Shopping List Website</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Shopping List Website</h3>
               <span>Shopping List Website</span>
               <span>Skills: HTML, CSS, JavaScript</span>
               <span>Period: 2021.11 - 2021.11</span>
@@ -372,11 +383,11 @@
           <a href="" class="project" target="blank" data-type="fe">
             <img
               class="project__img"
-              src="img/projects/portfolioWebSite.png"
+              src="images/projects/portfolioWebSite.png"
               alt="Portfolio Website"
             />
-            <div class="project__description">
-              <h3 class="project__name">Portfolio Website</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Portfolio Website</h3>
               <span>Portfolio Website</span>
               <span>Skills: HTML, CSS, JavaScript</span>
               <span>Period: 2021.10 - 2021.10</span>
@@ -387,15 +398,15 @@
             href="https://github.com/HZie/Appsolute-Time-with-Fox"
             class="project"
             target="blank"
-            data-type="app"
+            data-type="mobile"
           >
             <img
               class="project__img"
-              src="img/projects/timeWithFox.png"
+              src="images/projects/timeWithFox.png"
               alt="Time With Fox"
             />
-            <div class="project__description">
-              <h3 class="project__name">Time With Fox</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Time With Fox</h3>
               <span>To do list application with being friend with fox.</span>
               <span>Skills: Java, Android Studio, Realm</span>
               <span>Period: 2020.06 - 2020.09</span>
@@ -406,15 +417,15 @@
             href="https://github.com/HZie/MusicAssembler"
             class="project"
             target="blank"
-            data-type="papers"
+            data-type="publications"
           >
             <img
               class="project__img"
-              src="img/projects/musicAssembler.png"
+              src="images/projects/musicAssembler.png"
               alt="Music Assembler"
             />
-            <div class="project__description">
-              <h3 class="project__name">Music Assembler</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Music Assembler</h3>
               <span
                 >Integrated virtual music instrument with block-typed touch
                 sensor. Participated poster session in 2019 Korea Software
@@ -428,11 +439,11 @@
           <a href="https://store.steampowered.com/app/1257300/King_of_Cooking/" class="project" data-type="game">
             <img
               class="project__img"
-              src="img/projects/kingOfCooking.png"
+              src="images/projects/kingOfCooking.png"
               alt="King of Cooking"
             />
-            <div class="project__description">
-              <h3 class="project__name">King of Cooking</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">King of Cooking</h3>
               <span>Cooking tycoon game with managing 4 stores.</span>
               <span>SKills: C#, Unity</span>
               <span>Period: 2018.06 - 2020.06</span>
@@ -443,11 +454,11 @@
             href="https://github.com/HZie/NOTE-musical-diary-app"
             class="project"
             target="blank"
-            data-type="app"
+            data-type="mobile"
           >
-            <img class="project__img" src="img/projects/note.png" alt="Note" />
-            <div class="project__description">
-              <h3 class="project__name">NOTE</h3>
+            <img class="project__img" src="images/projects/note.png" alt="Note" />
+            <div class="project__metadata">
+              <h3 class="project__title">NOTE</h3>
               <span>Diary application using musical notes.</span>
               <span>Skills: Java, Android Studio, Realm</span>
               <span>Period: 2019.10 - 2020.09</span>
@@ -459,15 +470,15 @@
             href = "https://github.com/HZie/Appsolute_Draw"
             class="project"
             target="blank"
-            data-type="app"
+            data-type="mobile"
           >
             <img
               class="project__img"
-              src="img/projects/Sometimes.png"
+              src="images/projects/Sometimes.png"
               alt="Sometimes"
             />
-            <div class="project__description">
-              <h3 class="project__name">Sometimes: Words to Me</h3>
+            <div class="project__metadata">
+              <h3 class="project__title">Sometimes: Words to Me</h3>
               <span
                 >Application for writing quotes and showing them randomly.</span
               >
@@ -482,65 +493,122 @@
             target="blank"
             data-type="game"
           >
-            <img class="project__img" src="img/projects/3AM.png" alt="3AM" />
-            <div class="project__description">
-              <h3 class="project__name">3AM</h3>
+            <img class="project__img" src="images/projects/3AM.png" alt="3AM" />
+            <div class="project__metadata">
+              <h3 class="project__title">3AM</h3>
               <span>2D puzzle game using 3D objects.</span>
               <span>Skills: C#, Unity</span>
               <span>Period: 2017.06 - 2017.08</span>
             </div>
           </a>
+          </ul>
         </div>
-      </div>
-    </section>
-
-    <!-- Testimonials -->
-    <!--   
-    <section id="testimonials">
-        <div class="section__container">
-            <h1 class="testimonials__title">Testimonials</h1>
-            <h2 class="testimonials__subtitle">See what they say about me</h2>
-            <div class="testimonials">
-                <div class="testimonial">
-                    <img src="" alt="People" class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum doloribus labore ad facilis vitae, ullam blanditiis ea consequuntur provident esse, maiores, maxime eos dolor ut velit reiciendis et? Nam, mollitia.</p>
-                        <p class="name">
-                            <a href="">p1</a>
-                        </p>
-                    </div>
-                </div>
-    
-                <div class="testimonial">
-                    <img src="" alt="People" class="testimonial__avatar">
-                    <div class="testimonial__speech-bubble">
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum doloribus labore ad facilis vitae, ullam blanditiis ea consequuntur provident esse, maiores, maxime eos dolor ut velit reiciendis et? Nam, mollitia.</p>
-                        <p class="name">
-                            <a href="">p1</a>
-                        </p>
-                    </div>
-                </div>
+      </section>
+      <!-- Testimonials -->
+       <!--
+      <section id="testimonial" class="section max-container">
+        <h2 class="title">Testimonial</h2>
+        <p class="description">See what they say about me</p>
+        <ul class="testimonials">
+          <li class="testimonial">
+            <img
+              src="images/testimonials/people1.webp"
+              alt="people1"
+              class="testimonial__img"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem ad
+                iusto, ea alias, at sit libero laboriosam eaque eum, reiciendis
+                obcaecati vitae non reprehenderit beatae officiis. Dolore
+                corporis eveniet labore.
+              </p>
+              <p>
+                <a href="#" class="testimonial__bubble__name">James Kim</a>
+                /Google
+              </p>
             </div>
-        </div>
-    </section> 
--->
-
-    <!-- Contact Info -->
-    <section id="contact" class="section">
-      <h1 class="contact__title">Contact</h1>
-      <h2 class="contact__email">jiyeon.han346@gmail.com</h2>
-      <div class="contact__links">
-        <a href="https://github.com/HZie">
-          <i class="fab fa-github"></i>
+          </li>
+          <li class="testimonial">
+            <img
+              src="images/testimonials/people2.webp"
+              alt="people2"
+              class="testimonial__img"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iure
+                adipisci quibusdam perspiciatis neque consequuntur nostrum
+                quisquam dolore consequatur voluptatum animi laborum, sequi
+                ipsum rerum voluptatibus sit ab similique quos velit?
+              </p>
+              <p>
+                <a href="#" class="testimonial__bubble__name">Anna Jin</a>
+                /Samsung
+              </p>
+            </div>
+          </li>
+          <li class="testimonial">
+            <img
+              src="images/testimonials/people3.webp"
+              alt="people3"
+              class="testimonial__img"
+            />
+            <div class="testimonial__bubble">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Perferendis, mollitia. Fugiat recusandae unde ducimus harum
+                voluptas earum reiciendis expedita inventore quas ab eum
+                dignissimos, maiores deleniti officiis qui, repudiandae
+                voluptatibus?
+              </p>
+              <p>
+                <a href="#" class="testimonial__bubble__name">Anna Jin</a>
+                /Samsung
+              </p>
+            </div>
+          </li>
+        </ul>
+      </section>
+      -->
+      <!-- Arrow up -->
+       <!--
+      <aside>
+        <a class="arrow-up" href="#home" title="back to top">
+          <i class="fa-solid fa-arrow-up"></i>
         </a>
-        <a href="https://www.linkedin.com/in/jiyeon-han-a389931b3/">
-          <i class="fab fa-linkedin"></i>
-        </a>
-    </section>
-
-    <!-- Arrow Up-->
-    <button class="arrowup__button">
-      <i class="fas fa-arrow-up"></i>
-    </button>
+      </aside>
+      -->
+    </main>
+    <!-- Footer -->
+    <footer id="contact" class="section">
+      <div class="max-container">
+        <h2 class="title">Contact</h2>
+        <p class="description">jiyeon.han347@gmail.com</p>
+        <ul class="contact__links">
+          <li>
+            <a
+              class="contact__link"
+              href="https://github.com/hzie"
+              target="_blank"
+              title="my github link"
+            >
+              <i class="fa-brands fa-github"></i>
+            </a>
+          </li>
+          <li>
+            <a
+              class="contact__link"
+              href="https://www.linkedin.com/in/jiyeon-han347/"
+              target="_blank"
+              title="my linkedin link"
+            >
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+          </li>
+        </ul>
+        <!--<p>ⓒDream Coding Ellie - All rights reserved</p>-->
+      </div>
+    </footer>
   </body>
 </html>
