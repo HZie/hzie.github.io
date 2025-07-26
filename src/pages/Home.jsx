@@ -1,6 +1,7 @@
 // src/pages/Home.jsx
 import { useEffect, useRef, useState } from "react";
 import useScrollAnimation from "../utils/useScrollAnimation";
+import profile_image from "../images/profile.png";
 
 export default function Home() {
   const ref = useRef();
@@ -37,11 +38,7 @@ export default function Home() {
       <div className="home__container">
         {/* Hero part */}
         <div className="home__inner">
-          <img
-            src="/src/images/profile.png"
-            alt="Jiyeon Han"
-            className="home__img"
-          />
+          <img src={profile_image} alt="Jiyeon Han" className="home__img" />
           <h1>
             I'm{" "}
             <span className="highlight">
