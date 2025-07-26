@@ -614,13 +614,6 @@ body {
   margin: 0.5rem 1rem;
 }
 
-# Contact Section Styling .contact__section {
-  background-color: #5eaaa8;
-  color: #fff;
-  text-align: center;
-  padding: 4rem 1rem;
-}
-
 .contact__section .max-container {
   max-width: 800px;
   margin: 0 auto;
