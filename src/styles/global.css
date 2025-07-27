@@ -52,8 +52,8 @@
     width: 44px;
     height: 44px;
     border-radius: 50%;
-    background: #5eaaa8;
-    box-shadow: 0 2px 8px rgba(94, 170, 168, 0.15);
+    background: #3caaae;
+    box-shadow: 0 2px 8px rgba(60, 170, 174, 0.15);
     cursor: pointer;
     border: none;
     outline: none;
@@ -70,7 +70,7 @@
     left: 50%;
     width: 24px;
     height: 3px;
-    background: #fff;
+    background: #fffffc;
     border-radius: 2px;
     transition: all 0.3s cubic-bezier(0.4, 2, 0.3, 1);
     transform: translateX(-50%);
@@ -99,7 +99,7 @@
     display: none;
     flex-direction: column;
     width: 100%;
-    background: #5eaaa8;
+    background: #3caaae;
     position: absolute;
     top: 100%;
     left: 0;
@@ -196,16 +196,19 @@
 body {
   font-family: "Noto Sans", sans-serif;
   margin: 0;
-  background: #f9f9f9;
-  color: #483434;
+  background: #ffffff;
+  color: #333333;
 }
 
 /* Scroll animation */
 .section {
+  width: 80%;
+  margin: 0 auto;
   opacity: 0;
   transform: translateY(30px);
   transition: opacity 0.6s ease, transform 0.6s ease;
   padding: 1rem 3rem;
+  border-bottom: 2px solid #ffbdbe;
 }
 
 .section.visible {
@@ -214,7 +217,7 @@ body {
 }
 
 .highlight {
-  color: #ffe082;
+  color: #3caaae;
   font-weight: 700;
 }
 
@@ -241,8 +244,8 @@ body {
   display: flex;
   justify-content: center;
   height: 70px;
-  background: #5eaaa8;
-  color: #fff;
+  background: #ffffff;
+  color: #5eaaa8;
   transition: background 0.3s ease, height 0.3s ease, color 0.3s ease,
     box-shadow 0.3s ease;
   backdrop-filter: blur(6px);
@@ -250,8 +253,8 @@ body {
 }
 
 .navbar--scrolled {
-  background: #5eaaa8;
-  color: #fff;
+  background: #ffffff;
+  color: #5eaaa8;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
   height: 60px;
 }
@@ -290,7 +293,7 @@ body {
 
 .navbar__menu a:hover {
   font-weight: 500; /* maintain normal weight */
-  border-color: #ffe082;
+  border-color: #3caaae;
 }
 
 .home {
@@ -298,7 +301,7 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: #5eaaa8;
+  background: #ffffff;
 }
 
 /* Container wrapping Hero and About in Home */
@@ -324,13 +327,13 @@ body {
 .home__inner h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
-  color: #fff;
+  color: #333333;
 }
 
 .home__inner p {
   font-size: 1.5rem;
   margin-bottom: 2rem;
-  color: #fff;
+  color: #333333;
 }
 
 .home__img {
@@ -341,6 +344,7 @@ body {
   object-fit: cover;
   clip-path: circle(45% at center);
   object-position: center 30%;
+  border: 4px solid #5eaaa8; /* 청록색 테두리 추가 */
 }
 
 .scroll-down {
@@ -376,14 +380,14 @@ body {
   background: white;
   padding: 1rem;
   border-radius: 8px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   cursor: pointer;
 }
 
 .card:hover {
   transform: scale(1.03);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .card-img {
@@ -395,8 +399,8 @@ body {
 }
 
 .btn-more {
-  background: #5eaaa8;
-  color: #fff;
+  background: #ffffff;
+  color: #3caaae;
   padding: 0.5rem 1rem;
   border: none;
   border-radius: 4px;
@@ -406,7 +410,8 @@ body {
 }
 
 .btn-more:hover {
-  background: #4c8c8a;
+  background: #3caaae;
+  color: #ffffff;
 }
 
 .modal-overlay {
@@ -440,6 +445,13 @@ body {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 2rem;
+  color: #3caaae;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.section__title:hover {
+  border-color: #3caaae;
 }
 
 .about__content {
@@ -468,7 +480,13 @@ body {
 .detail h3 {
   font-size: 1.25rem;
   margin-bottom: 0.5rem;
-  color: #5eaaa8;
+  color: #3caaae;
+  border-bottom: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.detail h3:hover {
+  border-color: #3caaae;
 }
 
 .detail ul {
@@ -505,7 +523,7 @@ body {
 .contact__wrapper h1 {
   font-size: 2.5rem;
   margin-bottom: 1rem;
-  color: #5eaaa8;
+  color: #3caaae;
 }
 
 .contact__wrapper p {
@@ -514,7 +532,7 @@ body {
 }
 
 .contact__wrapper a {
-  color: #483434;
+  color: #333333;
   font-weight: 500;
   text-decoration: none;
   margin: 0 0.5rem;
@@ -538,7 +556,7 @@ body {
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 2rem;
-  color: #483434;
+  color: #333333;
 }
 
 .detail__content {
@@ -550,8 +568,9 @@ body {
 
 @media (min-width: 768px) {
   .detail__content {
-    flex-direction: row;
+    flex-direction: column;
     align-items: flex-start;
+    align-items: center;
   }
 }
 
@@ -566,7 +585,8 @@ body {
 .detail__info {
   flex: 2;
   line-height: 1.6;
-  color: #483434;
+  color: #333333;
+  background: #ffffff;
 }
 
 .detail__info p {
@@ -576,11 +596,18 @@ body {
 .detail__info .btn-more {
   display: inline-block;
   margin-top: 1.5rem;
-  background: #5eaaa8;
-  color: #fff;
+  background: #ffffff;
+  color: #3caaae;
   padding: 0.5rem 1rem;
+  border: 2px solid #3caaae;
   border-radius: 4px;
   text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.detail__info .btn-more:hover {
+  background: #3caaae;
+  color: #ffffff;
 }
 
 .detail__info .btn-more + .btn-more {
@@ -597,8 +624,8 @@ body {
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: #5eaaa8;
-  color: #fff;
+  background: #ffffff;
+  color: #3caaae;
   align-items: center;
 }
 
@@ -623,11 +650,13 @@ body {
 .contact__section .title {
   font-size: 2rem;
   margin-bottom: 1rem;
+  color: #3caaae;
 }
 
 .contact__section .description {
   font-size: 1.25rem;
   margin-bottom: 2rem;
+  color: #333333;
 }
 
 .contact__section .contact__links {
@@ -643,17 +672,18 @@ body {
 }
 
 .contact__section .contact__link {
-  color: #fff;
+  color: #ffbdbe;
   font-weight: 500;
   text-decoration: none;
-  border: 2px solid #fff;
+  border: 2px solid #ffbdbe;
   padding: 0.5rem 1rem;
   border-radius: 4px;
   transition: background 0.3s ease;
 }
 
 .contact__section .contact__link:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: #ffbdbe;
+  color: #ffffff;
 }
 
 /* Center content inside Contact section */
@@ -670,31 +700,32 @@ body {
 /* Home section button styles */
 .btn {
   display: inline-block;
-  background-color: #ffe082;
-  color: #483434;
+  background-color: #3caaae;
+  color: #ffffff;
   padding: 0.75rem 1.5rem;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
-  transition: background 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease;
 }
 .btn:hover {
-  background-color: #ffd55c;
+  background-color: #3caaae;
+  color: #ffffff;
 }
 .btn--outline {
   display: inline-block;
   background-color: transparent;
-  color: #ffe082;
+  color: #3caaae;
   padding: 0.75rem 1.5rem;
-  border: 2px solid #ffe082;
+  border: 2px solid #3caaae;
   border-radius: 4px;
   text-decoration: none;
   font-weight: 500;
   transition: background 0.3s ease, color 0.3s ease;
 }
 .btn--outline:hover {
-  background-color: #ffe082;
-  color: #483434;
+  background-color: #3caaae;
+  color: #ffffff;
 }
 
 /* Home section button container */
@@ -721,4 +752,12 @@ body {
 /* Adjust outline button to match solid button height */
 .home__buttons .btn--outline {
   border-width: 2px;
+}
+
+/* 강조 텍스트 가독성 향상 클래스 */
+.highlight-text {
+  color: #5eaaa8; /* 청록색 강조 */
+  font-weight: 600;
+  padding: 0.1rem 0.3rem;
+  border-radius: 3px;
 }

@@ -7,7 +7,7 @@ export const projects = [
     link: "https://store.steampowered.com/app/1257300/King_of_Cooking/",
     period: "2018.06 - 2020.06",
     skills: ["C#", "Unity"],
-    image: "https://via.placeholder.com/300"
+    image: "https://via.placeholder.com/300",
   },
   {
     id: 2,
@@ -17,6 +17,6 @@ export const projects = [
     link: "https://example.com",
     period: "2022.04 - 2022.06",
     skills: ["React Native", "Expo"],
-    image: "https://via.placeholder.com/300"
-  }
+    image: "https://via.placeholder.com/300",
+  },
 ];

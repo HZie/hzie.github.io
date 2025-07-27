@@ -12,12 +12,13 @@ export default function Publications() {
     <section id="publications" className="section" ref={ref}>
       <h1>Publications</h1>
       <div className="grid">
-        {publications.slice(0, 3).map((pub) => (
+        {publications.slice(0, 4).map((pub) => (
           <article
             key={pub.id}
             className="card"
             onClick={() => navigate(`/publications/${pub.id}`)}
           >
+            <img src={pub.image} alt={pub.title} className="card-img" />
             <h2>{pub.title}</h2>
             <p>
               <strong>{pub.venue}</strong>
@@ -26,9 +27,9 @@ export default function Publications() {
           </article>
         ))}
       </div>
-      <button className="btn-more" onClick={() => navigate("/publications")}>
+      {/*<button className="btn-more" onClick={() => navigate("/publications")}>
         Show More
-      </button>
+      </button>*/}
     </section>
   );
 }

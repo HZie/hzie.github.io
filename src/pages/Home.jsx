@@ -46,7 +46,7 @@ export default function Home() {
               <span className="cursor">|</span>
             </span>
           </h1>
-          <p>MS in Human-Computer Interaction, Ewha Womans University</p>
+          <p>Prospective Ph.D. Student</p>
         </div>
         <div className="home__buttons">
           <a

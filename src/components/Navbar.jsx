@@ -120,13 +120,13 @@ export default function Navbar() {
           >
             About
           </a>
-          {/*
+
           <Link to="/publications" onClick={handleMenuClose}>
             Publications
-          </Link>*/}
-          <Link to="/projects" onClick={handleMenuClose}>
-            Projects
           </Link>
+          {/*<Link to="/projects" onClick={handleMenuClose}>
+            Projects
+          </Link>*/}
           <a
             href="/JiyeonHanCV.pdf"
             target="_blank"

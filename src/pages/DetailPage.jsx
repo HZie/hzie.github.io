@@ -40,6 +40,9 @@ export default function DetailPage() {
               </p>
             )}
             <p>{item.description}</p>
+            <Link to={`/${category}`} className="btn-more">
+              Back to {category.charAt(0).toUpperCase() + category.slice(1)}
+            </Link>
             {item.link && (
               <a
                 href={item.link}
@@ -50,9 +53,6 @@ export default function DetailPage() {
                 {category === "projects" ? "View Project" : "Read Full Paper"}
               </a>
             )}
-            <Link to={`/${category}`} className="btn-more">
-              Back to {category.charAt(0).toUpperCase() + category.slice(1)}
-            </Link>
           </div>
         </div>
       </div>
