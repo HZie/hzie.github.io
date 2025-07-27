@@ -165,7 +165,7 @@
     margin-right: 0;
   }
   .home__inner h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   .home__inner p {
     font-size: 0.875rem;
@@ -774,4 +774,32 @@ body {
   font-weight: 600;
   padding: 0.1rem 0.3rem;
   border-radius: 3px;
+}
+
+@media (max-width: 768px) {
+  /* Fix horizontal overflow and center content on mobile */
+  * {
+    max-width: 100% !important;
+    box-sizing: border-box;
+  }
+
+  .section {
+    width: 90%;
+    padding: 1rem; /* Reduce padding to avoid overflow */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Single column for mobile */
+  }
+
+  .card-img,
+  .detail__img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .card {
+    width: 100%;
+  }
 }
