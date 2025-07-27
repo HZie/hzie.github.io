@@ -39,7 +39,18 @@ export default function DetailPage() {
                 <strong>Period:</strong> {item.period}
               </p>
             )}
-            <p>{item.description}</p>
+            {item.description && (
+              <p>
+                <strong>Description:</strong> {item.description}
+              </p>
+            )}
+            {item.abstract && (
+              <p>
+                <strong>Abstract</strong>
+                <br />
+                {item.abstract}
+              </p>
+            )}
             <Link to={`/${category}`} className="btn-more">
               Back to {category.charAt(0).toUpperCase() + category.slice(1)}
             </Link>
