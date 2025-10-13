@@ -1,0 +1,9 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<title>Redirecting…</title>
+<script>
+  // 현재 경로(/about 같은)를 쿼리로 잠시 보관하면서 루트로 이동
+  sessionStorage.redirectPath =
+    location.pathname + location.search + location.hash;
+  location.replace("/");
+</script>

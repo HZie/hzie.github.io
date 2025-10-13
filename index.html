@@ -8,6 +8,16 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+    <script>
+      // 404.html이 넘겨준 원래 경로로 히스토리를 교체 → 리액트 앱 라우터가 처리
+      (function () {
+        var p = sessionStorage.redirectPath;
+        if (p) {
+          history.replaceState(null, null, p);
+          sessionStorage.removeItem("redirectPath");
+        }
+      })();
+    </script>
     <script type="module" crossorigin src="./assets/index-DpIM2ri8.js"></script>
     <link rel="stylesheet" crossorigin href="./assets/index-BaBZXIzl.css">
   </head>
