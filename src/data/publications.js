@@ -10,6 +10,8 @@ export const publications = [
     link: "https://dl.acm.org/doi/abs/10.1145/3613905.3650784",
     period: "2023.09 - 2024.05",
     image: "/images/AscleAI.png",
+    image_alt:
+      "Workflow showing clinical speech converted to text, processed by an LLM, and returned as a summarized document via AscleAI.",
   },
   {
     id: 2,
@@ -22,6 +24,8 @@ export const publications = [
     link: "https://doi.org/10.1145/3613905.3650785",
     period: "2023.09 - 2024.05",
     image: "/images/MuseForge.png",
+    image_alt:
+      "Screenshot of MuseForge, an AI music generation interface, showing a text prompt input, keyword suggestions, and generated music tracks with waveform previews and descriptions.",
   },
 
   {
@@ -35,6 +39,8 @@ export const publications = [
     link: "https://www.dbpia.co.kr/Journal/articleDetail?nodeId=NODE11287750",
     period: "2022.06 - 2023.03",
     image: "/images/MoodChartBot.png",
+    image_alt:
+      "Flowchart of MoodChartBot functions: users can write or edit daily mood charts, or view a weekly summary, with mood detection and mood change graphs.",
   },
   {
     id: 4,
@@ -47,5 +53,7 @@ export const publications = [
     link: "https://koreascience.kr/article/JAKO202329158325629.page",
     period: "2022.01 - 2023.04",
     image: "/images/TogGrid.png",
+    image_alt:
+      "Photo of a tactile grid prototype connected to an Arduino with multicolored wires, showing a raised wooden grid interface on a cardboard base.",
   },
 ];

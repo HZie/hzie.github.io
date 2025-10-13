@@ -19,7 +19,7 @@ export default function PublicationsPage() {
             onClick={() => navigate(`/publications/${pub.id}`)}
           >
             {" "}
-            <img src={pub.image} alt={pub.title} className="card-img" />
+            <img src={pub.image} alt={pub.image_alt} className="card-img" />
             <h2>{pub.title}</h2>
             <p>
               <strong>{pub.venue}</strong>
