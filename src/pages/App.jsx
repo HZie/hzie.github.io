@@ -1,21 +1,8 @@
-import Navbar from "../components/Navbar";
 import Home from "./Home";
 import About from "./About";
-import Publications from "./Publications";
-import Projects from "./Projects";
+import Publications, { AllPublications } from "./Publications";
 import Contact from "./Contact";
 
 export default function App() {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Home />
-        <About />
-        <Publications />
-        {/*<Projects />*/}
-        <Contact />
-      </main>
-    </>
-  );
+  return <main id="main-content"><Home /><About /><Publications /><AllPublications /><Contact /></main>;
 }

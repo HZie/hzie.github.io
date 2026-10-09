@@ -1,37 +1,7 @@
-import { useRef } from "react";
-import useScrollAnimation from "../utils/useScrollAnimation";
-
 export default function Contact() {
-  const ref = useRef();
-  useScrollAnimation(ref);
   return (
-    <section id="contact" class="contact__section">
-      <div class="max-container">
-        <h2 class="title">Contact</h2>
-        <p class="description">jiyeon.han347@gmail.com</p>
-        <ul class="contact__links">
-          <li>
-            <a
-              class="btn btn--outline"
-              href="https://github.com/hzie"
-              target="_blank"
-              title="my github link"
-            >
-              Github
-            </a>
-          </li>
-          <li>
-            <a
-              class="btn btn--outline"
-              href="https://www.linkedin.com/in/jiyeon-han347/"
-              target="_blank"
-              title="my linkedin link"
-            >
-              LinkedIn
-            </a>
-          </li>
-        </ul>
-      </div>
-    </section>
+    <footer id="contact" className="contact__section">
+      <div className="contact__inner"><h2>Contact</h2><a className="contact__email" href="mailto:jiyeon.han347@gmail.com">jiyeon.han347@gmail.com <span aria-hidden="true">↗</span></a><div className="contact__bottom"><span>Jiyeon Han</span><div className="contact__links"><a href="https://github.com/hzie" target="_blank" rel="noopener noreferrer">GitHub ↗</a><a href="https://www.linkedin.com/in/jiyeon-han347/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a href="/JiyeonHanCV.pdf" target="_blank" rel="noopener noreferrer">CV ↗</a></div></div></div>
+    </footer>
   );
 }

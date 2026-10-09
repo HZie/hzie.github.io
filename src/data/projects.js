@@ -8,6 +8,7 @@ export const projects = [
     period: "2018.06 - 2020.06",
     skills: ["C#", "Unity"],
     image: "https://via.placeholder.com/300",
+    image_alt: "Screenshot of the main title from King of Cooking game",
   },
   {
     id: 2,
@@ -18,5 +19,6 @@ export const projects = [
     period: "2022.04 - 2022.06",
     skills: ["React Native", "Expo"],
     image: "https://via.placeholder.com/300",
+    image_alt: "Screenshot of Shopping List App",
   },
 ];

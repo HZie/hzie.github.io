@@ -1,33 +1,8 @@
-import { useRef } from "react";
-import { useNavigate } from "react-router-dom";
-import useScrollAnimation from "../utils/useScrollAnimation";
-import { publications } from "../data/publications";
+import { publicationGroups } from "../data/publications";
+import PublicationList from "../components/PublicationList";
+import Contact from "./Contact";
 
 export default function PublicationsPage() {
-  const ref = useRef();
-  useScrollAnimation(ref);
-  const navigate = useNavigate();
-
-  return (
-    <section className="section page" ref={ref}>
-      <h1>All Publications</h1>
-      <div className="grid">
-        {publications.map((pub) => (
-          <article
-            key={pub.id}
-            className="card"
-            onClick={() => navigate(`/publications/${pub.id}`)}
-          >
-            {" "}
-            <img src={pub.image} alt={pub.image_alt} className="card-img" />
-            <h2>{pub.title}</h2>
-            <p>
-              <strong>{pub.venue}</strong>
-            </p>
-            <p>{pub.summary}</p>
-          </article>
-        ))}
-      </div>
-    </section>
-  );
+  return (<main id="main-content"><section className="section page"><div className="section-heading"><h1>Publications</h1><p className="lead">Publications on accessibility, human–AI interaction, and AI-supported creative expression.</p></div>
+      {publicationGroups.map((group) => <section className="publication-group" key={group.title}><h2>{group.title}</h2><PublicationList publications={group.papers} headingLevel="h3" /></section>)}<p className="publication-note">* Equal contribution.</p></section><Contact /></main>);
 }

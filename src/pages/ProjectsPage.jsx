@@ -9,7 +9,7 @@ export default function ProjectsPage() {
   const navigate = useNavigate();
 
   return (
-    <section className="section page" ref={ref}>
+    <main id="main-content" className="section page" ref={ref}>
       <h1>All Projects</h1>
       <div className="grid">
         {projects.map((proj) => (
@@ -24,6 +24,6 @@ export default function ProjectsPage() {
           </article>
         ))}
       </div>
-    </section>
+    </main>
   );
 }
